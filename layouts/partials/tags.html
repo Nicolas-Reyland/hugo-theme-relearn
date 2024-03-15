@@ -1,8 +1,9 @@
 
 {{- if .Params.tags }}
-<div class="tags">
+  <div class="taxonomy-tags term-list cstyle tags">
 {{- range .Params.tags }}
-  <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>
+<!--  <a class="tag-link" href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a>-->
+  <a class="term-link highlight" style="--VARIABLE-TAGS-BG-color: var(--INTERNAL-TAG-BG-color);" href="#{{ urlquery . }}">{{ . }}</a>
 {{- end }}
 </div>
 {{- end }}
